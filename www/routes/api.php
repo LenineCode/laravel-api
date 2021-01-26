@@ -14,3 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/** Index route api */
+Route::get('/', function(Request $request) {
+    return [
+        'name' => env('APP_NAME', 'Laravel'),
+        'version' => env('APP_VERSION', '1.0.0')
+    ];
+});
